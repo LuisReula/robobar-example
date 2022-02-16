@@ -24,14 +24,15 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^5.0.0",
+    "@stryker-mutator/karma-runner": "^5.0.0",
     "angular-mocks": "^1.8.2",
+    "cypress": "^9.5.0",
     "jasmine-core": "^3.7.1",
     "karma": "^6.3.2",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.3",
     "karma-jasmine": "^4.0.1",
-    "lite-server": "^2.6.1",
-    "@stryker-mutator/core": "^5.0.0",
-    "@stryker-mutator/karma-runner": "^5.0.0"
+    "lite-server": "^2.6.1"
   }
 }
