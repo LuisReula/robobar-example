@@ -10,7 +10,10 @@
   "scripts": {
     "test": "karma start",
     "start": "lite-server",
-    "stryker": "stryker run"
+    "stryker": "stryker run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "cypress run --reporter junit --reporter-options 'mochaFile=results/test-output-[hash].xml'"
   },
   "keywords": [],
   "author": "",
