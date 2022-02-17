@@ -6,6 +6,7 @@ pipeline {
             steps{
                 nodejs('node-14.18.2'){
                     sh 'yarn install'
+                    sh 'yarn cy:open'
                     sh 'yarn cy:ci'
                 }
             }
