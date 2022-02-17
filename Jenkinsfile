@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test'){
             steps{
-                nodeJS('node-14.18.2'){
+                nodejs('node-14.18.2'){
                     sh 'yarn install cy:ci'
                 }
             }
