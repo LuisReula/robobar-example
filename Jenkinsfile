@@ -8,7 +8,9 @@ pipeline {
             }
             post{
                 always {
-                    junit 'results/*.xml'
+                    nodeJS('node-14.18.2'){
+                        junit 'results/*.xml'
+                    }
                 }
             }
         }
