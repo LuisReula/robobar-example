@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Test'){
             steps{
-                sh 'yarn cy:ci'
+                nodeJS('node-14.18.2'){
+                    sh 'yarn install cy:ci'
+                }
             }
             post{
                 always {
-                    nodeJS('node-14.18.2'){
-                        junit 'results/*.xml'
-                    }
+                    junit 'results/*.xml'
                 }
             }
         }
