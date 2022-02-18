@@ -19,5 +19,15 @@ pipeline {
                 }
             }
         }
+        stage('Security'){
+            steps{
+                sh '/usr/local/bin/trivy fs --format json --output trivy-results.json .'
+            }
+            post{
+                always{
+                    recordIssues(tools:[trivy(pattern: 'trivy-results.json')])
+                }
+            }
+        }
     }
 }
